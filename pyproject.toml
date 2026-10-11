@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chatai"
+version = "1.0.0"
+description = "Локальный ИИ-агент с веб-чатом и CLI: работает с файлами и кодом."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.31"]
+
+[project.scripts]
+chatai = "aihuina.main:main"
+
+[tool.setuptools]
+packages = ["aihuina"]
+
+[tool.setuptools.package-data]
+aihuina = ["web/index.html"]
